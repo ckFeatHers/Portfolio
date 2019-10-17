@@ -1,0 +1,121 @@
+body {
+	font-size: 18 px;
+}
+#wrapper {
+	margin-left: 		auto;
+	margin-right: 		auto;
+	width: 95%;
+	float: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+	color: midnightblue;
+	font-size: 250%;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1.5px -2px lightcyan;
+}
+h2 {
+	font-size:150%;
+	font-family:   cursive, sans-serif;
+	text-align: center;
+	padding: .25em 0 .5em;
+}
+h3 {    
+	font-family:   cursive, sans-serif;
+    font-size: 125%;
+	text-align: center;
+    margin: 0;
+	padding: .25em 0 .5em;
+}
+h5 {
+	color: #000475;
+	padding: 3px;
+	width: 50 px;
+}	
+div  { 
+	padding: 20px;
+	padding-bottom: 1.5em;
+	width: 90%;
+	max-width: 800 px;
+	float: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul li {
+	list-style-type: none;
+	padding-bottom: 1px;	
+}
+.hidden {
+	display: none;
+}
+
+div .parts {	
+	background-color: pink;
+	border: 7px solid steelblue;
+	border-radius: 25px;
+	margin: 20px;
+}
+
+label {
+	line-height: normal;
+	font-weight: bold;
+}
+
+div #forfoot {
+	background-color: aliceblue;
+		color: #000475;
+		width: 90%;
+	border: 7px solid steelblue;
+		border-radius: 15px;
+		padding: 20px;
+		margin: 20px; 
+}
+footer	{
+	background-color:	#30273a;
+		color: azure;
+		font-size: small;
+		font-style: italic;
+		text-align: center;		
+    border: 7px solid steelblue;
+		padding-top: 1em;
+		padding: 1em;
+		border-top: 4px solid #ccc;
+		border-bottom: 4px solid #ccc;
+}
+#foot {
+		color: yellow;
+		font-size: larger;
+}
+
+		
+		
+
+
+
+
+
+
+
