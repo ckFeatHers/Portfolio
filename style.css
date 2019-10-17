@@ -7,25 +7,6 @@ body {
 	width: 95%;
 	float: center;
 }
-* {
-  box-sizing: border-box;
-}
-
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 h1 {
 	color: midnightblue;
@@ -72,16 +53,27 @@ ul li {
 	display: none;
 }
 
-div .parts {	
-	background-color: pink;
+div .part {	
 	border: 7px solid steelblue;
 	border-radius: 25px;
 	margin: 20px;
 }
-
 label {
 	line-height: normal;
 	font-weight: bold;
+}
+
+#child, #moment {
+	background-color: lightcyan;
+}
+#child:hover, #moment:hover, #com1:hover #com2:hover{
+	background-color: cyan;
+}
+input.tablesorter-filter {
+	background-color: lightcyan;
+}
+input.tablesorter-filter:hover {
+	background-color: cyan;
 }
 
 div #forfoot {

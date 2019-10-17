@@ -1,63 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head><title>Project Index :: CFeathers </title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/eggplant/jquery-ui.css">
-	<link rel="stylesheet" href="style.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="main.js"></script>
-	</head>
+<head><title>SWIC Student :: CFeathers</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/eggplant/jquery-ui.css">
+<link rel="stylesheet" href="tablesorter-master/css/theme.default.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="quicksand-master/jquery.quicksand.js"></script>  
+<script type="text/javascript" src="tablesorter-master/js/jquery.tablesorter.js"></script>
+<!-- tablesorter widgets (optional) -->
+<script type="text/javascript" src="tablesorter-master/js/jquery.tablesorter.widgets.js"></script>
+<script src="main.js"></script>
+</head>
 <div id="wrapper">
-	<header>
-	</header>
-	<body>
-			<h1>Charlotte Feathers</h1>
+<header>
+</header>
+<body>
+		<h1>Charlotte Feathers</h1>
+		<h2>CIS 212 Spring 19 HW#11</h2>
+<!-- 10a Tabs -->
+		<div id="tabs">
+		<ul>
+			<li><a href="#hwdate">Due</a></li>
+			<li><a href="#hwpts">Points</a></li>
+			<li><a href="#hwdir">Directions</a></li>
+		</ul>
+		<div id="hwdate" >Tuesday, April 30, 2019 11:59 PM</div>
+		<div id="hwpts">Possible 20 points</div>
+		<div id="hwdir">Implement a  Jquery Plug-in into a project of your choice. 
+It can be your previous personal page you created earlier this 
+semester. I want you to use this on your page.		
+		</div>	
+		</div>
+	<div class="part"><!-- wrap content -->
+	<!-- assignment 11 -->
+	<div><h2>Quicksand jQuery Plug-in</h2>
+	<form id="nameSet">
+		<fieldset>
+			<legend>Quicksand Filter</legend>
+				<label for="chioce">
+					<input  
+					type="radio" id="chioce" 
+					name="sort" 
+					value="yr"
+					checked="checked">Names All</label>
+				
+				<label for="choice1">
+					<input  
+					type="radio" id="choice1" 
+					name="sort" 
+					value="az">Names A-Z</label>
+		</fieldset>
+	</form>		
+		<ul id="temp" class="grid">
+			<li data-id="k3y1" data-type="y1">Elias</li>
+			<li data-id="k4y1" data-type="y1">Gus</li>
+			<li data-id="k2y1" data-type="y1">Peter</li>
+			<li data-id="k1y1" data-type="y1">Winnie</li>
+			<li data-id="k1y2" data-type="y2">Abigail</li>
+			<li data-id="k2y2" data-type="y2">Aleighya</li>
+			<li data-id="k3y2" data-type="y2">Annie</li>	
+			<li data-id="k2y3" data-type="y3">Bethany</li>
+			<li data-id="k1y3" data-type="y3">Cathy</li>
+			<li data-id="k3y3" data-type="y3">Evangelina</li>
+			<li data-id="k4y3" data-type="y3">Nicholas</li>
+		</ul>
+		<ul id="byAZ" class="hidden">
+			<li data-id="k3y1" data-type="y1">Elias</li>
+			<li data-id="k4y1" data-type="y1">Gus</li>
+			<li data-id="k2y1" data-type="y1">Peter</li>
+			<li data-id="k1y1" data-type="y1">Winnie</li>
+			<li data-id="k1y2" data-type="y2">Abigail</li>
+			<li data-id="k2y2" data-type="y2">Aleighya</li>
+			<li data-id="k3y2" data-type="y2">Annie</li>	
+			<li data-id="k2y3" data-type="y3">Bethany</li>
+			<li data-id="k1y3" data-type="y3">Cathy</li>
+			<li data-id="k3y3" data-type="y3">Evangelina</li>
+			<li data-id="k4y3" data-type="y3">Nicholas</li>
+		</ul>
+		<ul id="byYR" class="hidden">
+			<li data-id="k1y2" data-type="y2">Abigail</li>
+			<li data-id="k2y2" data-type="y2">Aleighya</li>
+			<li data-id="k3y2" data-type="y2">Annie</li>
+			<li data-id="k2y3" data-type="y3">Bethany</li>
+			<li data-id="k1y3" data-type="y3">Cathy</li>
+			<li data-id="k3y1" data-type="y1">Elias</li>
+			<li data-id="k3y3" data-type="y3">Evangelina</li>
+			<li data-id="k4y1" data-type="y1">Gus</li>	
+			<li data-id="k4y3" data-type="y3">Nicholas</li>
+			<li data-id="k2y1" data-type="y1">Peter</li>
+			<li data-id="k1y1" data-type="y1">Winnie</li>	
+		</ul>
+
+		<div >		
+			<form id="moments"><br>
+				<label for="child">Child:</label>
+					<input id="child" name="Child">
+				<label for="moment">Moment:</label>
+					<input id="moment" type="text" name="Moment">
+				<br><br><br>
+				<span id="com">
+				<label>Completed:&nbsp;</label>
+					<input  type="radio" id="com1" 
+					name="Completed" 
+					value="Yes">
+					<label for="com1">YES</label>
+				<input  type="radio" id="com2" 
+					name="Completed" 
+					value="No"
+					checked="checked">
+					<label for="com2">NO</label>	
+					</span>
+			</form><br>
 			
-			<h2>Website Development Resume</h2>
-			<div id="tabsProj">
-				<ul>
-					<li><a href="#wporg">WordPress</a></li>
-					<li><a href="#wix3">Website Rework</a></li>
-					<li><a href="#weeb4">Graphic</a></li>
-				</ul>
-			<div id="wporg">
-				<p>
-					<a target="_blank" href="https://stlcms.org">STL Catholic Montessori School
-					</a> - Work in Progress
-				</p>
-				<p>
-					<a target="_blank"  href="https://stlcms2019.wordpress.com">
-					Saint Louis Catholic Montessori School
-					</a> - Prototype
-				</p>
-			</div>
-			<div id="wix3">
-				<p>
-					<a target="_blank"  href="https://charlottefeathers.wixsite.com/myspiritualspace">
-					Spiritual Direction
-					</a>
-				</p>
-				<p>Rework of website Design and Content for 
-					<a target="_blank" href="http://stnicholasofallon.org">
-					St Nicholas
-					</a> homepage.
-				</p>
-			</div>
-			<div id="weeb4">
-				<p>SWIC Graphic class 
-					<a target="_blank" href="https://cis259feathers.weebly.com">Resume
-					</a> with Weebly
-				</p>
-			</div>
-			</div><!--end of tabs-->
-	</body>
-	<div id="forfoot">
-		<footer >
-		Copyright &copy; 2019 <strong>SWIC</strong> Assignment. All rights reserved. eMail: 
-		<a id="foot" href="mailto:charlotte.feathers@student.swic.edu">explore@student.swic.edu</a><br>
-		Designed by Bright Feathers<br>
-		</footer>
-	</div> 
+<br>
+		<button id="showL">Add to List</button>
+		<h2>Tablesorter jQuery Plug-in</h2>
+		<div>
+		<h3>Lesson 2019 List</h3>
+				<table id="levelOne" class="tablesorter">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Lesson</th>
+							<th>Status</th>							
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Gus</td>
+							<td>Walking</td>
+							<td>Completed</td>
+						</tr>
+						<tr>
+							<td>Elias</td>
+							<td>Walking</td>
+							<td>Completed</td>
+						</tr>
+						<tr>
+							<td>Bethany</td>
+							<td>Tray</td>
+							<td>Completed</td>
+						</tr>
+						<tr>
+							<td>Evangelina</td>
+							<td>Plants</td>
+							<td>Completed</td>
+						</tr>
+						<tr>
+							<td>Winnie</td>
+							<td>Plants</td>
+							<td>Missed</td>
+						</tr>
+						<tr>
+							<td>Peter</td>
+							<td>Tray</td>
+							<td>Completed</td>
+						</tr>
+						<tr>
+							<td>Nicholas</td>
+							<td>Plants</td>
+							<td>Completed</td>
+						</tr>
+						<tr>
+							<td>Cathy</td>
+							<td>Plants</td>
+							<td>Completed</td>
+						</tr>
+						<tr>
+							<td>Annie</td>
+							<td>Visitation</td>
+							<td>Missed</td>
+						</tr>
+						<tr>
+							<td>Aleighya</td>
+							<td>Visitation</td>
+							<td>Completed</td>
+						</tr>
+						<tr>
+							<td>Nicholas</td>
+							<td>Visitation</td>
+							<td>Completed</td>
+						</tr>
+						<tr>
+							<td>Abigail</td>
+							<td>Plants</td>
+							<td>Missed</td>
+						</tr>
+						<tr>
+							<td>Evangelina</td>
+							<td>Visitation</td>
+							<td>Completed</td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+		
+</div><!-- end of content wrap -->
+</body>
+
+<div id="forfoot">
+	<footer >
+	Copyright &copy; 2019 <strong>SWIC</strong> Assignment. All rights reserved. eMail: 
+	<a id="foot" href="mailto:charlotte.feathers@student.swic.edu">explore@student.swic.edu</a><br>
+	Designed by Bright Feathers<br>
+	</footer>
+</div> 
 </div><!-- end/wrapper -->
 </html>
